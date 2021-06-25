@@ -1,25 +1,31 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
-import { Row, Col, Image } from "antd";
-
-// import { Container, Row, Col } from "reactstrap";
-import headerImage from "../../media/headerImage.png";
+import { Button } from 'reactstrap';
+import headerImage from "../../media/header.png";
 
 const Header = () => {
 	return (
 		<div>
-			<div class="container header-bg">
-				{/* <div className="header-bg"> */}
+				<div className="container-lg header-bg">
 				<div className="row">
 					<div className="col box">
 						{/* <Image width={100} preview={false} src={headerImage} /> */}
-						<img src={headerImage} className="img-fluid" alt="Responsive image" />
+						<img src={headerImage} className="img-fluid" style={{
+							"minHeight":"250px",
+					"minWidth":"250px",
+					"paddingLeft":"30px",
+					"paddingRight":"30px"
+					}} alt="Responsive image" />
 					</div>
 					<div className="col box">
-						<h1 className="textMid">HELLO, I AM THE ENGINEER WHO READS DOCUMENTATION</h1>
-					</div>
+						
+						<h1 className="gradient-heading">HELLO
+						<br></br> USAMA HERE</h1>
+						<span className="subheading-text" >I AM THE ENGINEER WHO READS DOCUMENTATION</span>
+						
+						<Button className="rounded-button" color="info">LOOK AT MY WORK</Button>{' '}
+						
+						</div>
 				</div>
-			</div>
 			{/* <Row>
 					<Col className="box" span={12}></Col>
 					<Col className="box" span={12}>
@@ -27,7 +33,7 @@ const Header = () => {
 						<Image width={500} preview={false} src={headerImage} />
 					</Col>
 				</Row> */}
-			{/* </div> */}
+			</div>
 		</div>
 	);
 };

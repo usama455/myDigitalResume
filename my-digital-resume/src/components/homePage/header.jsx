@@ -24,7 +24,7 @@ const Header = () => {
 								className="img-fluid"
 								style={{
 									minHeight: "300px",
-									minWidth: "350px",
+									minWidth: "300px",
 									padding: "30px",
 									borderRadius: "80px"
 								}}

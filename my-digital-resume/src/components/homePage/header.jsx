@@ -21,13 +21,13 @@ const Header = () => {
 							{/* <Image width={100} preview={false} src={headerImage} /> */}
 							<img
 								src={headerImage}
-								className="img-fluid"
-								style={{
-									minHeight: "300px",
-									minWidth: "300px",
-									padding: "30px",
-									borderRadius: "80px"
-								}}
+								className="img-fluid header-image"
+								// style={{
+								// 	minHeight: "300px",
+								// 	minWidth: "300px",
+								// 	padding: "30px",
+								// 	borderRadius: "80px"
+								// }}
 								alt="Responsive image"
 							/>
 						</div>

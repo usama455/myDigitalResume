@@ -14,7 +14,7 @@ const Card = (props) => {
 									<FontAwesomeIcon icon={cardIcon} style={{ fontSize: 50, paddingTop: 10 }} />
 								</div>
 								<div className="card-body">
-									<h5 className="card-title" style={{ textAlign: "center" }}>
+									<h5 className="card-title" style={{ textAlign: "center" , fontWeight:"500" }}>
 										{cardTitle}
 									</h5>
 									<p className="card-text" style={{ textAlign: "center" }}>

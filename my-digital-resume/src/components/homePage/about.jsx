@@ -3,18 +3,19 @@ import Card from "../common/card";
 import { faLaptopCode, faMobileAlt, faPenNib } from "@fortawesome/free-solid-svg-icons";
 const About = () => {
 	return (
-		<div>
+		<div id="about">
 			<div
 				style={{
 					background: "white",
-					paddingTop: 300,
+					paddingTop: 200,
 					textAlign: "left",
 					position: "relative",
 					zIndex: -1,
 
 					// top: "80"
 					top: "-20vh",
-					paddingBottom: 80
+					paddingBottom: 80,
+					
 					// borderRadius: 50,
 					// marginTop: 30,
 					// marginLeft: "5vw",
@@ -24,10 +25,13 @@ const About = () => {
 				<div className="container">
 					<div className="row">
 						<div className="col">
-							<h1>ABOUT MYSELF</h1>
+
+     <h1 className="about-heading" style ={{textAlign:"center"}}>ABOUT MYSELF</h1>
+						
 							<h4
 								style={{
-									textAlign: "justify"
+									textAlign: "justify",
+									fontFamily: "Montserrat, sans-serif"
 								}}
 							>
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, dolor unde, quos, dicta mollitia
@@ -44,7 +48,7 @@ const About = () => {
 								cardIcon={faLaptopCode}
 								cardBody="Lorem ipsum dolor sit amet consectetur adipisicing elit."
 							/> */}
-							<div className="col">
+							{/* <div className="col"> */}
 								<div className="container">
 									<div className="row">
 										<div className="col-sm">
@@ -60,7 +64,7 @@ const About = () => {
 												cardIcon={faMobileAlt}
 												cardBody="Lorem ipsum dolor sit amet consectetur adipisicing elit."
 											/>
-										</div>{" "}
+										</div>
 										<div className="col-sm">
 											<Card
 												cardTitle="ARTICLE WRITING"
@@ -71,7 +75,7 @@ const About = () => {
 									</div>
 								</div>
 							</div>
-						</div>
+						{/* </div> */}
 					</div>
 				</div>
 			</div>

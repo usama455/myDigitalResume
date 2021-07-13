@@ -12,7 +12,8 @@ import reactIcon from "../media/logos/reactjs-icon.svg";
 import flaskIcon from "../media/logos/pocoo_flask-icon.svg";
 import mongoDbIcon from "../media/logos/mongodb-icon.svg";
 import { useMediaQuery } from 'react-responsive'
-import Carousel from 'react-elastic-carousel';
+// import Carousel from 'react-elastic-carousel';
+import CarouselComp from "./common/carousel";
 
 const Work = () => {
 
@@ -20,38 +21,43 @@ const Work = () => {
 
 	const myWork = 
 	{ flutter : [{
-			image : flutterImage1,
+			images : [flutterImage1,flutterImage2,flutterImage3],
 			name : "SPOORTMATE",
 			description:"Share your sport with everyone.",
 			techStack : [{name: "Flutter", icon:flutterIcon} ,{name: "Firebase", icon:firebaseIcon} ], 
+			link:"https://play.google.com/store/apps/details?id=com.spoortmate&hl=en&gl=US",
 			achievements : []
 		},
 		{
-			image : flutterImage2,
+			images : [flutterImage2, flutterImage1,flutterImage3],
 			name : "MANAGE MONEY",
 			description:"Share your sport with everyone.",
 			techStack : [{name: "Flutter", icon:flutterIcon} ,{name: "Firebase", icon:firebaseIcon} ], 
+			link:null,
 			achievements : []
 		},
 		{
-			image : flutterImage3,
+			images : [flutterImage3],
 			name : "SMART HOME",
 			description:"Share your sport with everyone.",
+			link:null,
 			techStack : [{name: "Flutter", icon:flutterIcon} ,{name: "Firebase", icon:firebaseIcon} ], 
 			achievements : []
 		},
 	
 	], 
 	react:[{
-		image:reactImage1,
+		images:[reactImage1],
 		name: "WORKAHOLIC",
 		techStack:[{name: "REACT JS", icon:reactIcon} ,{name: "FLASK", icon:flaskIcon} ], 
+		link:null,
 		description:"Share your sport with everyone.",
 		achievements:[]
 	},{
-		image:reactImage2,
+		images:[reactImage2],
 		name: "MOVIE MANIA",
 		techStack:[{name: "REACT JS", icon:reactIcon} ,{name: "NODE JS", icon:nodeIcon}, {name:"MONGO DB", icon:mongoDbIcon} ], 
+		link:null,
 		description:"Share your sport with everyone.",
 		achievements:[]
 	}]
@@ -63,13 +69,13 @@ const Work = () => {
      <h1 className="work-heading" style ={{marginBottom:"50px", textAlign:"center"}}> MY RECENT WORK</h1>
     
 	 {isTabletOrMobile ? 
-	 
-	 <Carousel disableArrowsOnEnd={false} itemPadding={[10,10,10,10]}  showArrows={false} >
-        {
-		[...myWork.flutter, ...myWork.react].map(project =>{
-			return <div key={project.name}> <WorkCard cardData={project}/> </div>
-		} )}
-      </Carousel>
+	 <CarouselComp ChildComp={WorkCard} disableArrowsOnEnd={false} itemPadding={[10,10,10,10]}  showArrows={false}  callingOn={"mobile"} objList={[...myWork.flutter,...myWork.react]}/>
+	//  <Carousel disableArrowsOnEnd={false} itemPadding={[10,10,10,10]}  showArrows={false} >
+    //     {
+	// 	[...myWork.flutter, ...myWork.react].map(project =>{
+	// 		return <div key={project.name}> <WorkCard cardData={project}/> </div>
+	// 	} )}
+    //   </Carousel>
 	 : 
 	 <div className="container">
 		<div className="row no-gutters justify-content-center "  >

@@ -5,7 +5,6 @@ import headerImage from "../../media/image.jpg";
 import {
 	LinkedinOutlined,
 	MediumOutlined,
-	PhoneOutlined,
 	GoogleOutlined,
 	GithubOutlined,
 	TwitterOutlined

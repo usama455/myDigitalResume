@@ -65,7 +65,8 @@ const Work = () => {
 	 {isTabletOrMobile ? 
 	 
 	 <Carousel disableArrowsOnEnd={false} itemPadding={[10,10,10,10]}  showArrows={false} >
-        {myWork.flutter.map(project =>{
+        {
+		[...myWork.flutter, ...myWork.react].map(project =>{
 			return <div key={project.name}> <WorkCard cardData={project}/> </div>
 		} )}
       </Carousel>

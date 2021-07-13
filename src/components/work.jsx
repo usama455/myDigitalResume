@@ -11,10 +11,12 @@ import nodeIcon from '../media/logos/nodejs-icon.svg';
 import reactIcon from "../media/logos/reactjs-icon.svg";
 import flaskIcon from "../media/logos/pocoo_flask-icon.svg";
 import mongoDbIcon from "../media/logos/mongodb-icon.svg";
-
-import { faLaptopCode, faMobileAlt, faPenNib } from "@fortawesome/free-solid-svg-icons";
+import { useMediaQuery } from 'react-responsive'
+import Carousel from 'react-elastic-carousel';
 
 const Work = () => {
+
+	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1000px)' })
 
 	const myWork = 
 	{ flutter : [{
@@ -59,7 +61,16 @@ const Work = () => {
 	<div id="work">
 
      <h1 className="work-heading" style ={{marginBottom:"50px", textAlign:"center"}}> MY RECENT WORK</h1>
-     <div className="container">
+    
+	 {isTabletOrMobile ? 
+	 
+	 <Carousel disableArrowsOnEnd={false} itemPadding={[10,10,10,10]}  >
+        {myWork.flutter.map(project =>{
+			return <div key={project.name}> <WorkCard cardData={project}/> </div>
+		} )}
+      </Carousel>
+	 : 
+	 <div className="container">
 		<div className="row no-gutters justify-content-center "  >
 			<div className="col-auto d-flex "  > 
 			<WorkCard  cardData = {myWork.flutter[0]}/>
@@ -83,7 +94,7 @@ const Work = () => {
 
 
 </div>
-
+} 
 	</div>)
 };
 

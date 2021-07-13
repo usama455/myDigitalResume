@@ -1,5 +1,5 @@
 import React from "react";
-import Blog from "../blog";
+import Blog from "../blog/blog";
 import Contact from "../contact";
 import Navbar from "../navbar";
 import Work from "../work";

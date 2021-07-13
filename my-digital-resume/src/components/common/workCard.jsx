@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import Flippy, {FrontSide, BackSide} from 'react-flippy';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {  faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 const WorkCard = props => {
   const {
     cardData
@@ -84,7 +85,12 @@ const WorkCard = props => {
       <div>
               <h3 style={{textAlign:"center", paddingTop:"10px"}}>{cardData.name}</h3>
               <h6 style={{textAlign:"justify", padding:"15px"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum pariatur, totam veniam fuga deleniti quam, impedit dignissimos esse reprehenderit repellat maxime quas accusamus eum non in velit ea perspiciatis doloribus!</h6>
-              <p style={{textAlign:"justify", paddingLeft:"15px", paddingRight:"15px"}}>view</p>
+              <p style={{textAlign:"justify", paddingLeft:"15px", paddingRight:"15px" , textDecoration:"underline" , cursor:"pointer"}} 
+                onClick={_=>window.open("https://play.google.com/store/apps/details?id=com.spoortmate&hl=en&gl=US")}
+              >Check out more 
+               <FontAwesomeIcon icon={faExternalLinkAlt} style={{ fontSize:25, paddingTop: 10 }} />
+               </p> 
+             
             </div>
              </BackSide>
   </Flippy>

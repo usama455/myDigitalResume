@@ -42,7 +42,7 @@ const About = () => {
 							</h4>
 						</div>
 
-						<div className="w-100" style={{ paddingTop: 70 }}>
+						{/* <div className="w-100" style={{ paddingTop: 70 }}> */}
 							{/* <Card
 								cardTitle="WEB DEVELOPMENT"
 								cardIcon={faLaptopCode}
@@ -50,22 +50,22 @@ const About = () => {
 							/> */}
 							{/* <div className="col"> */}
 								<div className="container">
-									<div className="row">
-										<div className="col-sm">
+									<div className="row no-gutters justify-content-center">
+										<div className="col-auto d-flex "  style ={{paddingTop:"70px"}}>
 											<Card
 												cardTitle="WEB DEVELOPMENT"
 												cardIcon={faLaptopCode}
 												cardBody="Lorem ipsum dolor sit amet consectetur adipisicing elit."
 											/>
 										</div>
-										<div className="col-sm">
+										<div className="col-auto d-flex "  style ={{paddingTop:"70px"}}>
 											<Card
 												cardTitle="MOBILE DEVELOPMENT"
 												cardIcon={faMobileAlt}
 												cardBody="Lorem ipsum dolor sit amet consectetur adipisicing elit."
 											/>
 										</div>
-										<div className="col-sm">
+										<div className="col-auto d-flex "  style ={{paddingTop:"70px"}}>
 											<Card
 												cardTitle="ARTICLE WRITING"
 												cardIcon={faPenNib}
@@ -76,7 +76,7 @@ const About = () => {
 								</div>
 							</div>
 						{/* </div> */}
-					</div>
+					{/* </div> */}
 				</div>
 			</div>
 		</div>

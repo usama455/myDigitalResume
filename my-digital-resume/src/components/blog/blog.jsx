@@ -1,4 +1,5 @@
 import React from 'react';
+import BlogLayout from './cardsLayout';
 const Blog = () => {
     return ( 
         <div id="blog">
@@ -13,7 +14,9 @@ const Blog = () => {
 						<div className="col">
 					
                         <h1 className="about-heading" style ={{textAlign:"center", marginTop:80, marginBottom:50}}>BLOG</h1>
-							<h4
+						
+						<BlogLayout/>
+							{/* <h4
 								style={{
 									textAlign: "justify",
 									fontFamily: "Montserrat, sans-serif"
@@ -24,7 +27,7 @@ const Blog = () => {
 								eaque possimus vero! Lorem ipsum dolor sit amet consectetur adipisicing elit. In dicta possimus
 								exercitationem rerum corporis, voluptas suscipit nostrum, similique eius totam nemo reiciendis dolores
 								laudantium nobis sed dolorum perspiciatis, nulla numquam!
-							</h4>
+							</h4> */}
 						</div>
 
 					

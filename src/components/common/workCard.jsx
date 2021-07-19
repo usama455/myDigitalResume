@@ -99,7 +99,7 @@ const WorkCard = (props) => {
 							<FontAwesomeIcon icon={faExternalLinkAlt} style={{ fontSize: 25, paddingTop: 10 }} />
 						</span>
 
-						<Modal isOpen={modal} toggle={toggle} style={isTabletOrMobile ? {} : { minWidth: "50em" }}>
+						<Modal isOpen={modal} toggle={toggle} style={isTabletOrMobile ? {} : { minWidth: "50em" }} centered={true}>
 							<ModalBody>
 								{/* {cardData.link} */}
 								<CarouselComp

@@ -7,9 +7,9 @@ const CarouselComp = (props) => {
 		<Carousel disableArrowsOnEnd={disableArrowsOnEnd} itemPadding={itemPadding} showArrows={showArrows}>
 			{objList.map((obj) => {
 				return (
-					<div key={obj.name} style={{ minWidth: 700, height: 500 }}>
+					<div key={obj.name}>
 						{" "}
-						<ChildComp cardData={obj} />{" "}
+						<ChildComp cardData={obj} isTabletOrMobile={true} />{" "}
 					</div>
 				);
 			})}

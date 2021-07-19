@@ -7,7 +7,7 @@ import CarouselComp from "./carousel";
 import WorkDetail from "./workDetail";
 
 const WorkCard = (props) => {
-	const { cardData } = props;
+	const { cardData, isTabletOrMobile } = props;
 
 	const [modal, setModal] = useState(false);
 
@@ -99,14 +99,14 @@ const WorkCard = (props) => {
 							<FontAwesomeIcon icon={faExternalLinkAlt} style={{ fontSize: 25, paddingTop: 10 }} />
 						</span>
 
-						<Modal isOpen={modal} toggle={toggle} style={{ minWidth: "5rem" }}>
+						<Modal isOpen={modal} toggle={toggle} style={isTabletOrMobile ? {} : { minWidth: "50em" }}>
 							<ModalBody>
 								{/* {cardData.link} */}
 								<CarouselComp
 									ChildComp={WorkDetail}
 									disableArrowsOnEnd={false}
 									itemPadding={[10, 10, 10, 10]}
-									showArrows={true}
+									showArrows={!isTabletOrMobile}
 									objList={workDetail}
 								/>
 							</ModalBody>

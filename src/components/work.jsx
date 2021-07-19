@@ -107,22 +107,22 @@ const Work = () => {
 				<div className="container">
 					<div className="row no-gutters justify-content-center ">
 						<div className="col-auto d-flex ">
-							<WorkCard cardData={myWork.flutter[0]} />
+							<WorkCard isTabletOrMobile={false} cardData={myWork.flutter[0]} />
 						</div>
 						<div className="col-auto d-flex ">
-							<WorkCard cardData={myWork.flutter[1]} />
+							<WorkCard isTabletOrMobile={false} cardData={myWork.flutter[1]} />
 						</div>
 						<div className="col-auto d-flex">
-							<WorkCard cardData={myWork.flutter[2]} />
+							<WorkCard isTabletOrMobile={false} cardData={myWork.flutter[2]} />
 						</div>
 						<div className="col-auto d-flex">
-							<WorkCard cardData={myWork.react[0]} />
+							<WorkCard isTabletOrMobile={false} cardData={myWork.react[0]} />
 						</div>
 						<div className="col-auto d-flex">
-							<WorkCard cardData={myWork.react[1]} />
+							<WorkCard isTabletOrMobile={false} cardData={myWork.react[1]} />
 						</div>
 						<div className="col-auto d-flex">
-							<WorkCard cardData={myWork.flutter[2]} />
+							<WorkCard isTabletOrMobile={false} cardData={myWork.flutter[2]} />
 						</div>
 					</div>
 				</div>

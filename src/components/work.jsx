@@ -84,7 +84,6 @@ const Work = () => {
 	return (
 		<div id="work">
 			<h1 className="work-heading" style={{ marginBottom: "50px", textAlign: "center" }}>
-				{" "}
 				MY RECENT WORK
 			</h1>
 

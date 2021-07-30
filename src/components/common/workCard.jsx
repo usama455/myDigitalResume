@@ -25,7 +25,10 @@ const WorkCard = (props) => {
 	const cardFrontStyle = {
 		width: "320px",
 		height: "350px",
-		textAlign: "center"
+		textAlign: "center",
+		// backgroundColor:
+		// 	"linear-gradient(105deg, rgba(81,62,175,1) 0%, rgba(49,160,184,1) 62%, rgba(42,180,186,1) 88%, rgba(74,190,173,1) 98%)",
+		background: "linear-gradient(90deg, rgba(81, 62, 175, 1) 0%, rgba(42, 180, 186, 1) 52%, rgba(74, 190, 173, 1) 98%)"
 	};
 	const outerCardStyle = {
 		width: "320px",

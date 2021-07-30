@@ -12,6 +12,9 @@ import reactIcon from "../media/logos/reactjs-icon.svg";
 import flaskIcon from "../media/logos/pocoo_flask-icon.svg";
 import mongoDbIcon from "../media/logos/mongodb-icon.svg";
 import { useMediaQuery } from "react-responsive";
+
+import { Carousel } from "3d-react-carousal";
+
 // import Carousel from 'react-elastic-carousel';
 import CarouselComp from "./common/carousel";
 
@@ -88,15 +91,27 @@ const Work = () => {
 			</h1>
 
 			{isTabletOrMobile ? (
-				<CarouselComp
-					ChildComp={WorkCard}
-					disableArrowsOnEnd={false}
-					itemPadding={[10, 10, 10, 10]}
-					showArrows={false}
-					callingOn={"mobile"}
-					objList={[...myWork.flutter, ...myWork.react]}
+				<Carousel
+					slides={[...myWork.flutter, ...myWork.react].map((obj) => {
+						return (
+							<div key={obj.name}>
+								{" "}
+								<WorkCard cardData={obj} isTabletOrMobile={true} />{" "}
+							</div>
+						);
+					})}
+					autoplay={false}
+					arrows={false}
 				/>
 			) : (
+				// <CarouselComp
+				// 	ChildComp={WorkCard}
+				// 	disableArrowsOnEnd={false}
+				// 	itemPadding={[10, 10, 10, 10]}
+				// 	showArrows={false}
+				// 	callingOn={"mobile"}
+				// 	objList={[...myWork.flutter, ...myWork.react]}
+				// />
 				//  <Carousel disableArrowsOnEnd={false} itemPadding={[10,10,10,10]}  showArrows={false} >
 				//     {
 				// 	[...myWork.flutter, ...myWork.react].map(project =>{

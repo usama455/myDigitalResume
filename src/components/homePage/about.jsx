@@ -1,8 +1,24 @@
 import React from "react";
-import Card from "../common/card";
+import Card from "../common/cards/skillsCard";
 import { faLaptopCode, faMobileAlt, faPenNib } from "@fortawesome/free-solid-svg-icons";
+import SkillBar from "react-skillbars";
 
 const About = () => {
+	const skills = [
+		{ type: "Python", level: 85 },
+		{ type: "Javascript", level: 85 },
+		{ type: "Flutter", level: 60 },
+		{ type: "ReactJS", level: 80 },
+		{ type: "NodeJS", level: 70 }
+	];
+	const colors = {
+		bar: "linear-gradient(105deg, rgba(81,62,175,1) 0%, rgba(49,160,184,1) 62%, rgba(42,180,186,1) 88%, rgba(74,190,173,1) 98%)",
+		title: {
+			text: "black",
+			background: "white"
+		}
+	};
+
 	return (
 		<div id="about">
 			<div
@@ -41,7 +57,7 @@ const About = () => {
 							</h4>
 						</div>
 						<div className="col-md-6">
-							<h4>SKILLS SKILLS SKILLS SKILLS</h4>
+							<SkillBar skills={skills} animationDelay={0} colors={colors} />
 						</div>
 					</div>
 					<div className="row " style={{ marginTop: "50px" }}>

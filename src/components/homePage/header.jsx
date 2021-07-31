@@ -1,14 +1,8 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
 import { Button } from "reactstrap";
-import headerImage from "../../media/image.jpg";
-import {
-	LinkedinOutlined,
-	MediumOutlined,
-	GoogleOutlined,
-	GithubOutlined,
-	TwitterOutlined
-} from "@ant-design/icons";
+import headerImage from "../../media/HEADERIMAGE.jpg";
+import { LinkedinOutlined, MediumOutlined, GoogleOutlined, GithubOutlined, TwitterOutlined } from "@ant-design/icons";
 
 const Header = () => {
 	return (

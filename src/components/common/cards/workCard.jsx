@@ -3,8 +3,8 @@ import Flippy, { FrontSide, BackSide } from "react-flippy";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { Modal, ModalBody } from "reactstrap";
-import CarouselComp from "./carousel";
-import WorkDetail from "./workDetail";
+import CarouselComp from "../carousel";
+import WorkDetail from "../workDetail";
 
 const WorkCard = (props) => {
 	const { cardData, isTabletOrMobile } = props;
@@ -28,8 +28,11 @@ const WorkCard = (props) => {
 		textAlign: "center",
 		// backgroundColor:
 		// 	"linear-gradient(105deg, rgba(81,62,175,1) 0%, rgba(49,160,184,1) 62%, rgba(42,180,186,1) 88%, rgba(74,190,173,1) 98%)",
-		background: "linear-gradient(90deg, rgba(81, 62, 175, 1) 0%, rgba(42, 180, 186, 1) 52%, rgba(74, 190, 173, 1) 98%)"
+		background: isTabletOrMobile
+			? " linear-gradient(90deg, rgba(81, 62, 175, 1) 0%, rgba(42, 180, 186, 1) 52%, rgba(74, 190, 173, 1) 98%)"
+			: ""
 	};
+
 	const outerCardStyle = {
 		width: "320px",
 		height: "350px",

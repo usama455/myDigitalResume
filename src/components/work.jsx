@@ -1,5 +1,5 @@
 import React from "react";
-import WorkCard from "./common/workCard";
+import WorkCard from "./common/cards/workCard";
 import flutterImage1 from "../media/flutter_1.jpg";
 import flutterImage2 from "../media/flutter_2.jpg";
 import flutterImage3 from "../media/flutter_3.jpg";

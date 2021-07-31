@@ -1,7 +1,5 @@
 import React from "react";
-import BlogLayout from "./cardsLayout";
-
-import { Carousel } from "3d-react-carousal";
+import BlogCard from "../common/cards/blogCard";
 
 const Blog = () => {
 	let slides = [
@@ -16,7 +14,8 @@ const Blog = () => {
 			<div
 				style={{
 					background: "white",
-					marginTop: 100
+					marginTop: 100,
+					paddingBottom: 100
 				}}
 			>
 				<div className="container">
@@ -26,8 +25,7 @@ const Blog = () => {
 								BLOG
 							</h1>
 
-							<Carousel slides={slides} autoplay={false} arrows={false} />
-							{/* <BlogLayout /> */}
+							<BlogCard />
 						</div>
 					</div>
 				</div>

@@ -57,7 +57,7 @@ const About = () => {
 							</h4>
 						</div>
 						<div className="col-md-6">
-							<SkillBar skills={skills} animationDelay={0} colors={colors} />
+							<SkillBar skills={skills} animationDelay={0} height={"25px"} colors={colors} />
 						</div>
 					</div>
 					<div className="row " style={{ marginTop: "50px" }}>

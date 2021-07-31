@@ -100,7 +100,7 @@ const Work = () => {
 							</div>
 						);
 					})}
-					autoplay={false}
+					autoplay={true}
 					arrows={false}
 				/>
 			) : (

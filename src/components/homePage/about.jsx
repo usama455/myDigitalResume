@@ -5,17 +5,17 @@ import SkillBar from "react-skillbars";
 
 const About = () => {
 	const skills = [
-		{ type: "Python", level: 85 },
-		{ type: "Javascript", level: 85 },
-		{ type: "Flutter", level: 60 },
-		{ type: "ReactJS", level: 80 },
-		{ type: "NodeJS", level: 70 }
+		{ type: "Flask", level: 70 },
+		{ type: "ReactJS", level: 85 },
+		{ type: "NodeJS", level: 80 },
+		{ type: "FLutter", level: 80 },
+		{ type: "AWS", level: 70 }
 	];
 	const colors = {
 		bar: "linear-gradient(105deg, rgba(81,62,175,1) 0%, rgba(49,160,184,1) 62%, rgba(42,180,186,1) 88%, rgba(74,190,173,1) 98%)",
 		title: {
-			text: "black",
-			background: "white"
+			text: "white",
+			background: "#655ac0"
 		}
 	};
 

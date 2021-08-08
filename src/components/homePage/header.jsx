@@ -1,10 +1,11 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
-import { Button } from "reactstrap";
-import headerImage from "../../media/HEADERIMAGE.jpg";
+// import { Button } from "reactstrap";
+import headerImage from "../../media/imageHeader.jpg";
 import { LinkedinOutlined, MediumOutlined, GoogleOutlined, GithubOutlined, TwitterOutlined } from "@ant-design/icons";
 
 const Header = () => {
+
 	return (
 		<div>
 			<div className="header-bg">
@@ -28,33 +29,33 @@ const Header = () => {
 							<h4 className="subheading-above">HEY EVERYBODY, I AM</h4>
 							<h1 className="gradient-heading">MUHAMMAD USAMA</h1>
 							<h4 className="subheading-text">I AM THE ENGINEER WHO READS DOCUMENTATION</h4>
+							<br/>
 							<p className="subheading-text">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit voluptatibus numquam animi asperiores
-								minima, harum accusamus quibusdam, facilis earum sed assumenda ea deleniti a dolore possimus nisi sit
-								aliquid maxime?
+							An energetic and motivated engineer
+							looking for exciting new opportunities to turn your amazing ideas into reality.
 							</p>
-
-							<Button outline className="rounded-button  d-none d-sm-block " color="info">
+<br/>
+							{/* <Button outline className="rounded-button  d-none d-sm-block " color="info">
 								LOOK AT MY WORK
-							</Button>
+							</Button> */}
 							<div className="container ">
 								<div className="row  row-cols-auto">
 									<div className="col">
 										{" "}
 										<div className="row justify-content-md-center">
-											<div className="col col-md-auto">
+											<div className="col col-md-auto" onClick={_=> window.open("https://www.linkedin.com/in/usama455/")}>
 												<GoogleOutlined className="contact-icons" />
 											</div>
-											<div className="col col-md-auto">
+											<div className="col col-md-auto" onClick={_=> window.open("https://www.linkedin.com/in/usama455/")}>
 												<LinkedinOutlined className="contact-icons" />
 											</div>
-											<div className="col col-md-auto">
+											<div className="col col-md-auto" onClick={_=> window.open("https://usama455.medium.com/")}>
 												<MediumOutlined className="contact-icons" />
 											</div>
-											<div className="col col-md-auto">
+											<div className="col col-md-auto" onClick={_=> window.open("https://twitter.com/_YOUsama_")}>
 												<TwitterOutlined className="contact-icons" />
 											</div>
-											<div className="col col-md-auto">
+											<div className="col col-md-auto" onClick={_=> window.open("https://github.com/usama455")}>
 												<GithubOutlined className="contact-icons" />
 											</div>
 										</div>

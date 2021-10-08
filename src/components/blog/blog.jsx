@@ -1,14 +1,14 @@
 import React from "react";
 import BlogCard from "../common/cards/blogCard";
 
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col } from "reactstrap";
 const Blog = () => {
 	const blogsList = [
 		{
 			id: 1,
 			imgSource: ["https://miro.medium.com/max/3840/1*JJmzyegMLyuB2iiYbzegBg.jpeg"],
 			title: "A Guide to React Before You Start Coding",
-			description:""
+			description: ""
 		},
 		{
 			id: 2,
@@ -17,20 +17,26 @@ const Blog = () => {
 				"https://miro.medium.com/max/383/1*zb_resF29j0tGt_hc4kThQ.png"
 			],
 			title: "Beginners Guide to Understanding GIT",
-			description:""
+			description: ""
 		},
 		{
 			id: 3,
 			imgSource: ["https://miro.medium.com/max/3840/1*MXEcx7sbfOUyKJYytNFYSQ.jpeg"],
 			title: "SQLite Database on a Raspberry Pi. Best DB for IoT ?",
-			description:""
+			description: ""
 		},
-		{ id: 4,
-			 imgSource: ["https://miro.medium.com/max/1920/1*zg2uu9SdnXo8TN2pwglftw.png"], 
-		title: "9 ways to interact with custom painter in Flutter", 
-		description:""},
-		{ id: 5, imgSource:[ "https://miro.medium.com/max/4000/1*Zrm0_n453SMvWPdGR0tlTA.jpeg"], title: "Who was Muhammad Ali Jinnah?",
-		description:"" }
+		{
+			id: 4,
+			imgSource: ["https://miro.medium.com/max/1920/1*zg2uu9SdnXo8TN2pwglftw.png"],
+			title: "9 ways to interact with custom painter in Flutter",
+			description: ""
+		},
+		{
+			id: 5,
+			imgSource: ["https://miro.medium.com/max/4000/1*Zrm0_n453SMvWPdGR0tlTA.jpeg"],
+			title: "Who was Muhammad Ali Jinnah?",
+			description: ""
+		}
 	];
 	return (
 		<div id="blog">
@@ -48,15 +54,16 @@ const Blog = () => {
 								BLOG
 							</h1>
 							<Container>
-							<Row>
-							{blogsList.map(blog =>{
-								return <Col><BlogCard blogData = {blog} /></Col>
-								
-							})}
-							      
-
-		</Row>
-</Container>
+								<Row>
+									{blogsList.map((blog) => {
+										return (
+											<Col key={blog.id}>
+												<BlogCard blogData={blog} />
+											</Col>
+										);
+									})}
+								</Row>
+							</Container>
 
 							{/* <BlogCard /> */}
 						</div>

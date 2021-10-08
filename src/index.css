@@ -1,25 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;1,900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;800&family=Roboto+Slab:wght@300;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;800&family=Roboto+Slab:wght@300;700&display=swap");
 head {
 	background: black;
 }
-
 
 body {
 	margin: 0;
 	/* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
 		"Droid Sans","Montserrat", "Helvetica Neue", sans-serif; */
 
-		font-family: "Montserrat", sans-serif;
-		-webkit-font-smoothing: antialiased;
+	font-family: "Montserrat", sans-serif;
+	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background: rgb(81, 62, 175);
 	background: linear-gradient(90deg, rgba(81, 62, 175, 1) 0%, rgba(42, 180, 186, 1) 52%, rgba(74, 190, 173, 1) 98%);
 }
-h1{
-	
+h1 {
 	font-family: "Montserrat", sans-serif;
 	font-weight: normal;
 }
@@ -95,7 +93,7 @@ code {
 /* HEADINGS */
 
 .gradient-heading {
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	font-weight: bolder;
 	font-size: 3em;
 	/* margin-top: 2em; */
@@ -166,7 +164,7 @@ code {
 }
 .subheading-above {
 	color: #355fb6;
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	font-weight: bold;
 	font-size: 1em;
 	/* margin-top: em; */
@@ -181,7 +179,7 @@ code {
 }
 .subheading-text {
 	color: #355fb6;
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	font-weight: bold;
 	/* font-size: 1.5em; */
 	margin-right: 20px;
@@ -300,17 +298,53 @@ code {
 	animation: rainbow-text-simple-animation 0.5s ease-in forwards;
 }
 
+.send-button {
+	font-family: "Montserrat", sans-serif;
+	color: white;
+	font-weight: bold;
+	margin: 5px;
+	padding: 10px;
+	cursor: pointer;
+	user-select: none;
+	text-align: start;
 
-.work-container{
-	border: 10px;
-	border-style: solid;
+	/* Fallback: Set a background color. */
+	background-color: white;
+	/* Create the gradient. */
 
+	/* Set the background size and repeat properties. */
+	background-size: 3rem;
+	/* background-repeat: repeat; */
+
+	/* Use the text as a mask for the background. */
+	/* This will show the gradient as a text color rather than element bg. */
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	/* Animate the text when loading the element. */
+	/* This animates it on page load and when hovering out. */
+	animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
 }
 
-
+.send-button:hover {
+	background-image: linear-gradient(
+		112deg,
+		rgba(85, 41, 218, 1) 0%,
+		rgba(74, 104, 191, 1) 10%,
+		rgba(48, 85, 162, 1) 19%,
+		rgba(47, 157, 214, 1) 26%,
+		rgba(0, 212, 255, 1) 100%
+	);
+	animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+}
+.work-container {
+	border: 10px;
+	border-style: solid;
+}
 
 .work-heading {
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	font-weight: normal;
 	font-size: 3em;
 	/* text-align: left; */
@@ -321,9 +355,8 @@ code {
 	color: white;
 }
 
-
 .about-heading {
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	font-weight: normal;
 	font-size: 3em;
 	text-align: left;
@@ -333,24 +366,12 @@ code {
 	user-select: none;
 	color: black;
 }
-.header-image{
+.header-image {
 	min-height: 300px;
 	min-width: 300px;
 	padding: 30px;
 	border-radius: 80px;
-	
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* TEST CODE */
 
@@ -385,7 +406,6 @@ code {
 	.header-image {
 		min-width: 250px;
 		min-height: 00px;
-		
 	}
 	/* img {
 		min-width: 250px;

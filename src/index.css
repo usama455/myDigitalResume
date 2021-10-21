@@ -302,8 +302,8 @@ code {
 	font-family: "Montserrat", sans-serif;
 	color: white;
 	font-weight: bold;
-	margin: 5px;
-	padding: 10px;
+	/* margin: 5px; */
+	/* padding: 10px; */
 	cursor: pointer;
 	user-select: none;
 	text-align: start;
@@ -320,7 +320,7 @@ code {
 	/* This will show the gradient as a text color rather than element bg. */
 	-webkit-background-clip: text;
 	background-clip: text;
-	-webkit-text-fill-color: transparent;
+	-webkit-text-fill-color: white;
 
 	/* Animate the text when loading the element. */
 	/* This animates it on page load and when hovering out. */
@@ -337,6 +337,33 @@ code {
 		rgba(0, 212, 255, 1) 100%
 	);
 	animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+}
+
+.disabled-send-button {
+	font-family: "Montserrat", sans-serif;
+	color:	rgba(0, 212, 255, 1) 100%;
+	font-weight: bold;
+	cursor: pointer;
+	user-select: none;
+	text-align: start;
+
+	/* Fallback: Set a background color. */
+	/* background-color: white; */
+	/* Create the gradient. */
+
+	/* Set the background size and repeat properties. */
+	background-size: 3rem;
+	/* background-repeat: repeat; */
+
+	/* Use the text as a mask for the background. */
+	/* This will show the gradient as a text color rather than element bg. */
+	-webkit-background-clip: text;
+	background-clip: text;
+	/* -webkit-text-fill-color: white; */
+
+	/* Animate the text when loading the element. */
+	/* This animates it on page load and when hovering out. */
+	/* animation: rainbow-text-simple-animation-rev 0.75s ease forwards; */
 }
 .work-container {
 	border: 10px;

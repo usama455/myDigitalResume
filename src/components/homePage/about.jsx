@@ -5,11 +5,11 @@ import SkillBar from "react-skillbars";
 
 const About = () => {
 	const skills = [
-		{ type: "Flask", level: 70 },
-		{ type: "ReactJS", level: 85 },
 		{ type: "NodeJS", level: 80 },
-		{ type: "FLutter", level: 80 },
-		{ type: "AWS", level: 70 }
+		{ type: "ReactJS", level: 80 },
+		{ type: "Flask", level: 70 },
+		{ type: "FLutter", level: 70 },
+		{ type: "AWS", level: 60 }
 	];
 	const colors = {
 		bar: "linear-gradient(105deg, rgba(81,62,175,1) 0%, rgba(49,160,184,1) 62%, rgba(42,180,186,1) 88%, rgba(74,190,173,1) 98%)",
@@ -28,15 +28,8 @@ const About = () => {
 					textAlign: "left",
 					position: "relative",
 					zIndex: -1,
-
-					// top: "80"
 					top: "-20vh",
 					paddingBottom: 80
-
-					// borderRadius: 50,
-					// marginTop: 30,
-					// marginLeft: "5vw",
-					// marginRight: "5vw"
 				}}
 			>
 				<div className="container">
@@ -51,9 +44,9 @@ const About = () => {
 									fontFamily: "Montserrat, sans-serif"
 								}}
 							>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, dolor unde, quos, dicta mollitia
-								praesentium omnis dolores laboriosam obcaecati totam incidunt veniam? Quod enim, quasi impedit maxime
-								eaque possimus vero! Lorem ipsum dolor
+								Apart from coding, I love to solve puzzles, play chess and read a lot of books. My experience and skills
+								in software development coupled with my passion for software automation enable me to design and execute
+								efficient, robust and scalable solutions for complex software problems.
 							</h4>
 						</div>
 						<div className="col-md-6">
@@ -67,7 +60,7 @@ const About = () => {
 									<Card
 										cardTitle="WEB DEVELOPMENT"
 										cardIcon={faLaptopCode}
-										cardBody="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+										cardBody="Design, build and support for all types of web applications"
 									/>
 								</div>
 								<div className="col-auto d-flex ">

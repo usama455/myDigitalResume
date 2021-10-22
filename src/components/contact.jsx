@@ -1,86 +1,72 @@
+/* eslint-disable no-template-curly-in-string */
 import React, { useState } from "react";
-import { Input, Form, Tooltip, Button, Spin } from "antd";
-import { SendOutlined } from "@ant-design/icons";
-// import { Button } from "reactstrap";
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Input, Form, Button, Spin } from "antd";
 import emailjs from "emailjs-com";
 
 const { TextArea } = Input;
 
+/* eslint-disable no-template-curly-in-string */
+
+const validateMessages = {
+	required: "${name} is required!",
+	types: {
+		email: "${name} is not a valid email!"
+	}
+};
+
 const Contact = () => {
-	const [name, setName] = useState("");
-	const [email, setEmail] = useState("");
-	const [message, setMessage] = useState("");
+	const [responseMessage, setResponseMessage] = useState("");
 	const [isLoading, setIsLoading] = useState(false);
 	const [form] = Form.useForm();
 
-	const handleNameInput = (userName) => {
-		setName(userName);
-	};
-	const handleEmailInput = (userEmail) => {
-		setEmail(userEmail);
-	};
-	const handleMessageInput = (userMessage) => {
-		setMessage(userMessage);
-	};
-
-	const handleButtonClick = (e) => {
-		console.log(
-			"SENDING MESSAGE",
-			process.env.REACT_APP_SERVICE_ID,
-			process.env.REACT_APP_EMAIL_TEMPELATE_ID,
-			name,
-			email,
-			message
-		);
-		// form.resetFields();
+	const onFinish = (values) => {
 		setIsLoading(true);
+		console.log(values);
+		form.resetFields();
+
+		// setIsLoading(false);
 		emailjs
 			.send(
 				process.env.REACT_APP_SERVICE_ID,
 				process.env.REACT_APP_EMAIL_TEMPELATE_ID,
-				{
-					name: name,
-					email: email,
-					message: message
-				},
+				{ ...values },
 				process.env.REACT_APP_EMAIL_USER_ID
 			)
 			.then(
 				(result) => {
 					setIsLoading(false);
-					setName("");
-					setEmail("");
-					setMessage("");
-					console.log(result.text);
+					setResponseMessage("You made the right choice. I'll contact you soon");
+					console.log("RESTULT ", result.text);
 				},
 				(error) => {
 					setIsLoading(false);
-					setName("");
-					setEmail("");
-					setMessage("");
+					setResponseMessage("Look's like I need to debug something. Kindly contact me on linkedin :)");
 					console.log(error.text);
 				}
 			);
 	};
+	const onFinishFailed = (values) => {
+		console.log("Failed", values);
+	};
 
 	return (
 		<div id="contact">
-			<h1 className="work-heading" style={{ textAlign: "center", marginTop: 50 }}>
-				CONTACT ME
+			<h1 className="work-heading " style={{ textAlign: "center", marginTop: 50 }}>
+				CONTACT
 			</h1>
 
-			<div className="row ">
+			<div className="row my-4">
 				<div className="container ">
-					<Form autoComplete="off">
+					<Form
+						form={form}
+						name="contact"
+						onFinish={onFinish}
+						onFinishFailed={onFinishFailed}
+						validateMessages={validateMessages}
+					>
 						<div className="row justify-content-center">
 							<div className="col-6">
-								<Form.Item
-									name="Name"
-									onChange={(e) => handleNameInput(e.target.value)}
-									rules={[{ required: true, message: "Please input your Name!" }]}
-								>
+								<Form.Item name="name" rules={[{ required: true }]}>
 									<Input placeholder="Name" />
 								</Form.Item>
 							</div>
@@ -89,9 +75,13 @@ const Contact = () => {
 						<div className="row justify-content-center">
 							<div className="col-6">
 								<Form.Item
-									name="Email"
-									onChange={(e) => handleEmailInput(e.target.value)}
-									rules={[{ required: true, message: "Please input your Email!" }]}
+									name="email"
+									rules={[
+										{
+											type: "email",
+											required: true
+										}
+									]}
 								>
 									<Input placeholder="Email" bordered={true} />
 								</Form.Item>
@@ -100,32 +90,33 @@ const Contact = () => {
 
 						<div className="row justify-content-center">
 							<div className="col-6">
-								<Form.Item
-									name="Message"
-									onChange={(e) => handleMessageInput(e.target.value)}
-									rules={[{ required: true, message: "Please input your Message!" }]}
-								>
+								<Form.Item name="message" rules={[{ required: true }]}>
 									<TextArea placeholder="Message" autoSize={{ minRows: 3, maxRows: 5 }} />
 								</Form.Item>
 							</div>
 						</div>
 
-						<div className="row justify-content-center ">
-							<div
-								className="col col-auto"
-								// onClick={(_) => window.open("https://www.linkedin.com/in/usama455/")}
-							>
-								{isLoading ? (
-									<Spin />
+						<div className="row justify-content-center  ">
+							<div className="col col-auto" style={{ textAlign: "center" }}>
+								{responseMessage !== "" ? (
+									<h6>{responseMessage}</h6>
 								) : (
-									<Button
-										// type = "primary"
-										className={!name || !email || !message ? "disabled-send-button" : "send-button"}
-										disabled={!name || !email || !message ? true : false}
-										onClick={handleButtonClick}
-									>
-										Send Message
-									</Button>
+									<div>
+										{" "}
+										{isLoading ? (
+											<Spin />
+										) : (
+											<Button
+												type="primary"
+												htmlType="submit"
+												className={"send-button"}
+												// disabled={!name || !email || !message ? true : false}
+												// onClick={onFinish}
+											>
+												Send Message
+											</Button>
+										)}
+									</div>
 								)}
 							</div>
 						</div>

@@ -64,6 +64,9 @@ const Header = () => {
 												<GithubOutlined className="contact-icons" />
 											</div>
 										</div>
+										<div>
+										{/* <a href="resume" download>Click to download</a> */}
+										</div>
 									</div>
 								</div>
 							</div>

@@ -8,8 +8,8 @@ const About = () => {
 		{ type: "NodeJS", level: 80 },
 		{ type: "ReactJS", level: 80 },
 		{ type: "Flask", level: 70 },
-		{ type: "FLutter", level: 70 },
-		{ type: "AWS", level: 60 }
+		{ type: "AWS", level: 60 },
+		{ type: "Flutter", level: 60 },
 	];
 	const colors = {
 		bar: "linear-gradient(105deg, rgba(81,62,175,1) 0%, rgba(49,160,184,1) 62%, rgba(42,180,186,1) 88%, rgba(74,190,173,1) 98%)",
@@ -60,21 +60,21 @@ const About = () => {
 									<Card
 										cardTitle="WEB DEVELOPMENT"
 										cardIcon={faLaptopCode}
-										cardBody="Design, build and support for all types of web applications"
+										cardBody="Design, build and support for all types of web applications. "
 									/>
 								</div>
-								<div className="col-auto d-flex ">
+								{/* <div className="col-auto d-flex ">
 									<Card
 										cardTitle="MOBILE DEVELOPMENT"
 										cardIcon={faMobileAlt}
 										cardBody="Lorem ipsum dolor sit amet consectetur adipisicing elit."
 									/>
-								</div>
+								</div> */}
 								<div className="col-auto d-flex ">
 									<Card
 										cardTitle="ARTICLE WRITING"
 										cardIcon={faPenNib}
-										cardBody="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+										cardBody="Technical blogs and opinion articles on current affairs."
 									/>
 								</div>
 							</div>

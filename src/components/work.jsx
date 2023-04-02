@@ -63,7 +63,7 @@ const Work = () => {
 				name: "WORKAHOLIC",
 				techStack: [
 					{ name: "REACT JS", icon: reactIcon },
-					{ name: "FLASK", icon: flaskIcon }
+					{ name: "Node JS", icon: nodeIcon }
 				],
 				link: null,
 				description: "Share your sport with everyone.",

@@ -84,9 +84,7 @@ const WorkCard = (props) => {
 					<div>
 						<h3 style={{ textAlign: "center", paddingTop: "10px" }}>{cardData.name}</h3>
 						<h6 style={{ textAlign: "justify", padding: "15px" }}>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum pariatur, totam veniam fuga deleniti
-							quam, impedit dignissimos esse reprehenderit repellat maxime quas accusamus eum non in velit ea
-							perspiciatis doloribus!
+							{cardData?.description}
 						</h6>
 						<span
 							style={{
